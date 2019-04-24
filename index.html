@@ -1,0 +1,51 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Self-similarity Matrix</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+</head>
+<body>
+    Matriz de verificação de auto-similaridade. 
+    <textarea type="text" name="text" id="inputText" rows="10" cols="50"></textarea>
+    <br>
+    <button onclick="pushData();">Play</button>
+    <div id="show"></div>
+    <script>
+        function pushData(){
+
+            var inputText = document.getElementById('inputText').value;
+            if(inputText == null || inputText == '' || inputText == ' '){
+                alert("Este campo não pode ficar vazio");
+                return false;
+            }
+            var str = inputText.split(' ');
+
+            var strLength = inputText.split(' ').length;
+
+            var myArray = str; 
+
+            var myArrayMirror = myArray;
+
+            for (let index = 0; index < strLength; index++) {
+                const elementA = myArray[index];
+
+                let i = 0; 
+                while(i < strLength) {
+                    const elementB = myArrayMirror[i];
+                    
+                    if(elementA == elementB){
+                        document.write('X'); 
+                    }
+                    else{
+                        document.write('O'); 
+                    } 
+                    i++; 
+                }
+                document.write('<br>');
+            }
+        }
+    </script>
+</body>
+</html>
