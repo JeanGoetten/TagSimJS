@@ -5,19 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Self-similarity Matrix</title>
     <link rel="stylesheet" type="text/css" href="style.css"> 
+    <script src="js/pushData.js"></script>
+    <script src="js/strFormat.js"></script>
+    <script src="js/selfSim.js"></script>
+    <script src="js/nullNot.js"></script>
+    <script src="js/clear.js"></script>
 </head>
 <body>
-<script src="js/pushData.js">
-</script>
     Matriz de verificação de auto-similaridade. 
+
+    <section>
     <br>
-    <textarea type="text" id="inputText" rows="10" cols="50" maxlength="3151">Input your text here here text your input</textarea>
-    <div id="inputText_feedback"></div>
+    <textarea type="text" id="inputTextA" rows="10" cols="50" maxlength="3151">Input your text here here text your input</textarea>
     <br>
-    <button onclick="pushData();">Play</button>
-    <button onclick="clearTextArea();">Clear Text</button>
-    <button onclick="clearTable();">Clear Table</button>
+    <button onclick="pushData('inputTextA', 'outputA');">Play</button>
+    <button onclick="clearTextArea('inputTextA');">Clear Text</button>
+    <button onclick="clearTable('outputA');">Clear Table</button>
     <br>
-    <table id="output"></table>
+    <table id="outputA"></table>
+    </section>
+
+    <section>
+    <br>
+    <textarea type="text" id="inputTextB" rows="10" cols="50" maxlength="3151">Input your text here here text your input</textarea>
+    <br>
+    <button onclick="pushData('inputTextB', 'outputB');">Play</button>
+    <button onclick="clearTextArea('inputTextB');">Clear Text</button>
+    <button onclick="clearTable('outputB');">Clear Table</button>
+    <br>
+    <table id="outputB"></table>
+    </section>
+
 </body>
 </html>
