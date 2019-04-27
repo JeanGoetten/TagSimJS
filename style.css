@@ -1,0 +1,17 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20pt; 
+}
+section{
+    float: left; 
+}
+table{
+    border-collapse: collapse;
+    width: auto; 
+    height: auto;
+}
+td{ 
+    font-size: 5pt; 
+    margin: 0;
+    padding: 0;
+}
