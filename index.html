@@ -18,7 +18,7 @@
     <br>
     <textarea type="text" id="inputTextA" rows="10" cols="50" maxlength="3151">Input your text here here text your input</textarea>
     <br>
-    <button onclick="pushData('inputTextA', 'outputA');">Play</button>
+    <button onclick="pushData('inputTextA', 'inputTextA', 'outputA');">Play</button>
     <button onclick="clearTextArea('inputTextA');">Clear Text</button>
     <button onclick="clearTable('outputA');">Clear Table</button>
     <br>
@@ -26,10 +26,16 @@
     </section>
 
     <section>
+    <button onclick="pushData('inputTextA', 'inputTextB', 'outputC')">==</button>
+    <table id="outputC"></table>
+    <button onclick="clearTable('outputC');">Clear Table</button>
+    </section>
+    
+    <section>
     <br>
     <textarea type="text" id="inputTextB" rows="10" cols="50" maxlength="3151">Input your text here here text your input</textarea>
     <br>
-    <button onclick="pushData('inputTextB', 'outputB');">Play</button>
+    <button onclick="pushData('inputTextB', 'inputTextB', 'outputB');">Play</button>
     <button onclick="clearTextArea('inputTextB');">Clear Text</button>
     <button onclick="clearTable('outputB');">Clear Table</button>
     <br>
