@@ -12,32 +12,34 @@
     <script src="js/clear.js"></script>
 </head>
 <body>
-    <header class="top"><h1>SelfSim </h1></header>
-
+    <header class="top">SelfSim</header>
+    <section>
     <aside class="controls">
-        <button onclick="pushData('inputTextA', 'inputTextA', 'outputA');">A=A</button>
-        <button onclick="clearTextArea('inputTextA');">Clear Text A</button>
-        <button onclick="clearTable('outputA');">Clear Table A</button>
+        <ul>
+            <li><button onclick="pushData('inputTextA', 'inputTextA', 'outputA');">A=A</button></li>
+            <li><button onclick="clearTextArea('inputTextA');">Clear Text A</button></li>
+            <li><button onclick="clearTable('outputA');">Clear Table A</button></li>
+        
+            <li><button onclick="pushData('inputTextB', 'inputTextB', 'outputB');">B=B</button></li>
+            <li><button onclick="clearTextArea('inputTextB');">Clear Text B</button></li>
+            <li><button onclick="clearTable('outputB');">Clear Table B</button></li>
 
-        <button onclick="pushData('inputTextB', 'inputTextB', 'outputB');">B=B</button>
-        <button onclick="clearTextArea('inputTextB');">Clear Text B</button>
-        <button onclick="clearTable('outputB');">Clear Table B</button>
-
-        <button onclick="pushData('inputTextA', 'inputTextB', 'outputAB')">A=B</button>
-        <button onclick="clearTable('outputAB');">Clear Table</button>
-
+            <li><button onclick="pushData('inputTextA', 'inputTextB', 'outputAB')">A=B</button></li>
+            <li><button onclick="clearTable('outputAB');">Clear Table AB</button></li>
+        </ul>
     </aside>
-
-    <section class="inputs">
+    </section>
+    <section>
+    <article class="inputs">
         <textarea type="text" id="inputTextA" rows="15" cols="40" maxlength="3151">Input your text A here here text your input</textarea>
         <textarea type="text" id="inputTextB" rows="15" cols="40" maxlength="3151">Input your text B here here text your input</textarea>
-        
-    </section>
+    </article>
 
-    <section class="outputs">
+    <article class="outputs">
         <table id="outputA"></table>
         <table id="outputB"></table>
         <table id="outputAB"></table>
-    </section>
+    </article>
+    </section> 
 </body>
 </html>
