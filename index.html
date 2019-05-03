@@ -10,10 +10,14 @@
     <script src="js/selfSim.js"></script>
     <script src="js/nullNot.js"></script>
     <script src="js/clear.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/maxCharDisclaimer.js"></script>
 </head>
 <body>
-    <header class="top">SelfSim</header>
-    <section>
+    <header class="top">
+        <div id="logo">SelfSim</div>
+        <div id="statistics">statistics</div>
+    </header>
     <aside class="controls">
         <ul>
             <li><button onclick="pushData('inputTextA', 'inputTextA', 'outputA');">A=A</button></li>
@@ -28,18 +32,20 @@
             <li><button onclick="clearTable('outputAB');">Clear Table AB</button></li>
         </ul>
     </aside>
-    </section>
     <section>
-    <article class="inputs">
-        <textarea type="text" id="inputTextA" rows="15" cols="40" maxlength="3151">Input your text A here here text your input</textarea>
-        <textarea type="text" id="inputTextB" rows="15" cols="40" maxlength="3151">Input your text B here here text your input</textarea>
-    </article>
-
+        <article class="inputs">
+            <textarea type="text" id="inputTextA" rows="15" cols="40" maxlength="3151" onkeyup="charCount(this.value, 'counter1')">Input your text A here</textarea>
+            <b id='counter1'></b> 
+            </article>
+            <article class="inputs">
+            <textarea type="text" id="inputTextB" rows="15" cols="40" maxlength="3151" onkeyup="charCount(this.value, 'counter2')">Input your text B here</textarea>
+            <b id='counter2'></b> 
+        </article>
+    </section>
     <article class="outputs">
         <table id="outputA"></table>
         <table id="outputB"></table>
         <table id="outputAB"></table>
     </article>
-    </section> 
 </body>
 </html>
