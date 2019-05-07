@@ -16,24 +16,20 @@
 <body>
     <header class="top">
         <div id="logo">SelfSim</div>
-            <div id="statistics">
-                <b id="wordsA"></b>
-                <b id="wordsB"></b>
-                <b id="wordsC"></b>
             </div>
         </div>
     </header>
     <aside class="controls">
         <ul>
-            <li><button id="AA" onclick="pushData('inputTextA', 'inputTextA', 'outputA', this.id);">A=A</button></li>
+            <li><button id="AA" onclick="pushData('inputTextA', 'inputTextA', 'outputA');">A=A</button></li>
             <li><button onclick="clearTextArea('inputTextA');">Clear Text A</button></li>
             <li><button onclick="clearTable('outputA');">Clear Table A</button></li>
         
-            <li><button id="BB" onclick="pushData('inputTextB', 'inputTextB', 'outputB', this.id);">B=B</button></li>
+            <li><button id="BB" onclick="pushData('inputTextB', 'inputTextB', 'outputB');">B=B</button></li>
             <li><button onclick="clearTextArea('inputTextB');">Clear Text B</button></li>
             <li><button onclick="clearTable('outputB');">Clear Table B</button></li>
 
-            <li><button id="AB" onclick="pushData('inputTextA', 'inputTextB', 'outputAB', this.id)">A=B</button></li>
+            <li><button id="AB" onclick="pushData('inputTextA', 'inputTextB', 'outputAB')">A=B</button></li>
             <li><button onclick="clearTable('outputAB');">Clear Table AB</button></li>
         </ul>
     </aside>
@@ -48,9 +44,9 @@
         </article>
     </section>
     <article class="outputs">
-        <table id="outputA"></table>
-        <table id="outputB"></table>
-        <table id="outputAB"></table>
+        <div id="outputA"></div>
+        <div id="outputB"></div>
+        <div id="outputAB"></div>
     </article>
 </body>
 </html>
